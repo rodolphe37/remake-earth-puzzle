@@ -21,7 +21,7 @@
     margin-top: 50px;
     border: 1px solid white;
     max-width: 21%;
-    max-height: 600px;
+    max-height: 552px;
     border-radius: 10px;
 }
 
@@ -85,4 +85,5 @@ section.navbar-center.text-error >p {
     margin: 10px;
     border: 1px solid wheat;
     border-radius: 5px;
+    padding: 0.4px;
 }

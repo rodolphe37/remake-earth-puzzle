@@ -11,6 +11,14 @@ const ScoreWindow = ({count}) => {
     console.log('click')
     state.scoreValue = state.scoreValue + 1
   }
+  let mov = () => {
+    if(count < 2) {
+      return mov = <p>mouvement</p>
+} else {
+  return mov = <p>mouvements</p>
+}
+
+}
 
 //   let score= 0;
 
@@ -37,7 +45,7 @@ const ScoreWindow = ({count}) => {
     <div className="scoreView" >
     <Timer />
    {/* <h1>Score :{incrementScore}</h1>*/}
-    <p>Vous avez effectué {count} mouvements</p>
+    <p>Vous avez effectué {count} {mov()}</p>
     <img src={require('../quizz-images/earth/big1.jpg')} alt="beautiful World"/>
     </div>
   )
