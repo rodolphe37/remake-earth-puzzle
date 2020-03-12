@@ -5,11 +5,15 @@ import GridContext from "./components/GridContext";
 import ScoreWindow from "./components/ScoreWindow";
 import './App.css'
 import Header from "./components/Header";
+import classes from './components/BackgroundVideo/BackgroundVideo.module.css';
+
+
 
 
 function App({incrementScore, scoreValue}) {
   const { items, moveItem } = useContext(GridContext);
   const [count, setCount] = useState(0);
+  const videoSource = "https://shakyshuttle.com//static/planet-cartoon-space-animation-0e76607cd977409fd36a8a7b9c83d77c.mp4"
 
   useEffect(() => {
     document.title = `Vous avez fait ${count} déplacements`;
@@ -38,7 +42,6 @@ function App({incrementScore, scoreValue}) {
   return (
     <div className="App">
       <Header />
-
       <div className="container">
         <ScoreWindow count={count}/>
         <Grid  onDragEnd={() => setCount(count + 1)}  value={scoreValue}
@@ -52,6 +55,7 @@ function App({incrementScore, scoreValue}) {
           ))}
         </Grid>
       </div>
+
     </div>
   );
 }

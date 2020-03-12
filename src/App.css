@@ -29,6 +29,11 @@
   width: 95%;
 }
 
+.scoreView > p {
+  color: white;
+  font-size: large;
+}
+
 .reload {
   background-color: #38006b;
   border-radius: 4px;
@@ -72,4 +77,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+section.navbar-center.text-error >p {
+  background-color: rgba(255, 255, 255, 0.6);
+    margin: 10px;
+    border: 1px solid wheat;
+    border-radius: 5px;
 }

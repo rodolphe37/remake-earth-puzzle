@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const Grid = styled.div`
-  width: 1200px;
+  width:740px;
   display: flex;
   justify-content: end;
   flex-wrap: wrap;
