@@ -10,7 +10,7 @@ import './index.css'
 ReactDOM.render(
   <DndProvider backend={HTML5Backend}>
     <GridProvider>
-    <BackgroundVideo />
+      <BackgroundVideo />
       <App />
     </GridProvider>
   </DndProvider>,

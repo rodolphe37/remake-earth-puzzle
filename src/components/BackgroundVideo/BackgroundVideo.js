@@ -5,12 +5,12 @@ function BackgroundVideo() {
   const videoSource = "https://shakyshuttle.com//static/planet-cartoon-space-animation-0e76607cd977409fd36a8a7b9c83d77c.mp4"
   return (
     <div className="Content">
-    <div className={classes.Container} >
-    <video autoPlay="autoplay" loop="loop" muted className={classes.Video} >
-    <source src={videoSource} type="video/mp4" />
-    Your browser does not support the video tag.
-</video>
-</div>
+      <div className={classes.Container} >
+        <video autoPlay="autoplay" loop="loop" muted className={classes.Video} >
+          <source src={videoSource} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   );
 }
