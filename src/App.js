@@ -1,24 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, useState, useEffect } from "react";
+import DragItem from "./components/DragItem";
+import { Grid, GridImage, GridItem } from "./components/Grid";
+import GridContext from "./components/GridContext";
+import ScoreWindow from "./components/ScoreWindow";
+import './App.css'
+import Header from "./components/Header";
 
-function App() {
+
+function App({incrementScore, scoreValue}) {
+  const { items, moveItem } = useContext(GridContext);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `Vous avez fait ${count} déplacements`;
+  });
+
+  // const handleChangeSource = () => {
+  //   return (
+  //     <div className="App">
+  //     <Header />
+  //     <div className="container">
+  //       <ScoreWindow count={count}/>
+  //       <Grid  onDragEnd={() => setCount(count + 1)}  value={scoreValue}
+  //       increment={incrementScore} >
+  //         {items2.map(item => (
+  //           <DragItem key={item.id} id={item.id} onMoveItem={moveItem}>
+  //             <GridItem>
+  //               <GridImage src={item.src}></GridImage>
+  //             </GridItem>
+  //           </DragItem>
+  //         ))}
+  //       </Grid>
+  //     </div>
+  //   </div>
+  //   )
+  // }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+
+      <div className="container">
+        <ScoreWindow count={count}/>
+        <Grid  onDragEnd={() => setCount(count + 1)}  value={scoreValue}
+        increment={incrementScore} >
+          {items.map(item => (
+            <DragItem key={item.id} id={item.id} onMoveItem={moveItem}>
+              <GridItem>
+                <GridImage src={item.src}></GridImage>
+              </GridItem>
+            </DragItem>
+          ))}
+        </Grid>
+      </div>
     </div>
   );
 }
