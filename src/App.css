@@ -1,6 +1,7 @@
 .container {
   text-align: center;
   display: flex;
+  margin-left: 10px;
 }
 
 .header {
@@ -11,6 +12,7 @@
   margin-top: -22px;
   text-align: center;
   display: inherit;
+  position: fixed;
 }
 
 .header >h1 {
@@ -18,7 +20,7 @@
 }
 
 .scoreView {
-    margin-top: 50px;
+    margin-top: 148px;
     border: 1px solid white;
     max-width: 21%;
     max-height: 552px;

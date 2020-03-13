@@ -11,6 +11,7 @@ function App({incrementScore, scoreValue}) {
   const { items, moveItem } = useContext(GridContext);
   const [count, setCount] = useState(0);
 
+
   useEffect(() => {
     document.title = `Vous avez fait ${count} déplacements`;
   });

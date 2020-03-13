@@ -35,9 +35,9 @@ const ScoreWindow = ({count}) => {
 
   let mov = () => {
     if(count < 2) {
-      return mov = <p>mouvement</p>
+      return mov = "mouvement"
     } else {
-      return mov = <p>mouvements</p>
+      return mov = "mouvements"
     }
   }
 

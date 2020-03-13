@@ -7,6 +7,7 @@ export const Grid = styled.div`
   justify-content: end;
   flex-wrap: wrap;
   margin: 55px;
+  margin-top: 174px;
 `;
 
 export const GridImage = styled.div`

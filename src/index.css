@@ -1,7 +1,13 @@
+body {
+  margin: inherit;
+}
+
 .Content {
   position: absolute;
 }
 
 .App {
   position: relative;
+  max-width: 904px;
+  max-height: 817px;
 }

@@ -14,9 +14,10 @@
 
 .Container {
   position: fixed;
-  width: 161vw;
-  margin-left: -438px;
-  margin-top: -1%;
+    width: 222vw;
+    margin-left: 0vw;
+    margin-top: -1%;
+    height: auto;
 }
 
 /* Style the video: 100% width and height to cover the entire window */
