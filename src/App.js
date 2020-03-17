@@ -7,22 +7,26 @@ import './App.css'
 import Header from "./components/Header";
 
 
-function App(incrementScore, gameScore) {
+function App(incrementScore) {
   const { items, moveItem } = useContext(GridContext);
   const [count, setCount] = useState(0);
 
 
-  useEffect(() => {
-    document.title = `Vous avez fait ${count} déplacements`;
-  });
 
-// const getTotalScore = () => {
-//   const counts = Object.values({count});
-//   // return (console.log(counts), counts);
-//   return (counts)
-// }
+  let depl = () => {
+    if(count < 2) {
+      return depl = "déplacement"
+    } else {
+      return depl = "déplacements"
+    }
+  }
 
-  return (console.log(count),
+useEffect(() => {
+  document.title = `Vous avez fait ${count} ${depl()}`;
+});
+
+
+  return (
     <div className="App">
       <Header />
       <div className="container">
@@ -42,10 +46,6 @@ function App(incrementScore, gameScore) {
     </div>
   );
 }
-// export function getTotalScore(count) {
-//   const gameScore = Object.values({count});
-//   return (console.log(gameScore), gameScore);
-// }
 
 
 export default App;

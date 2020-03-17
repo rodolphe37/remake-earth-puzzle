@@ -43,7 +43,7 @@ const ScoreWindow = ({ count } ) => {
 
   return (
     <div className="scoreView" >
-    <Timer count={count}/>
+    <Timer count={count} />
    {/* <h1>Score :{incrementScore}</h1>*/}
     <p>Vous avez effectué</p><p> {count} {mov()}</p>
     <img src={require('../quizz-images/earth/big1.jpg')} alt="beautiful World"/>

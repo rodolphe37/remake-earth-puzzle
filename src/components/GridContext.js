@@ -38,7 +38,7 @@ export class GridProvider extends Component {
   }
 
   render() {
-    return (console.log(this.state.items, this.state.items2), console.log(this.state.itemsList),
+    return (
       <GridContext.Provider value={this.state} >
         {this.props.children}
       </GridContext.Provider>

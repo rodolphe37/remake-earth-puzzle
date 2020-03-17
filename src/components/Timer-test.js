@@ -69,13 +69,55 @@ export default class Timer extends React.Component {
     this.setState(initialState);
   };
 
+//  victory = (count) => {
+//     if(this.endGame === GAME_STATE.DONE) {
+//         if( count >= 20){
+//         alert("Génial, je n'ais pas de mots... Vous ête un Champion")
+//         }
+//         if (count <= 30) {
+//           alert("Wouah, Vous êtes super rapide, Bien Joué !")
+//         }
+//         if (count <= 40) {
+//           alert("Bravo vous avez terminé la partie en moin de 40 mouvements")
+//         } if( count <= 60) {
+//           alert("Bravo vous avez terminé, mais ... vous pouvez faire mieux !")
+//         } if (count > 60) {
+//           alert("Bravo vous avez terminé, mais vous pouvez être beaucoup plus rapide !")
+//         }
+//         return alert;
+//     }
+//   }
+
+  victory = (count) => {
+  if(this.state.gameState === GAME_STATE.DONE) {
+    if( count >= 20){
+    return(<p>"Génial, je n'ais pas de mots... Vous ête un Champion"</p>)
+    }
+    if (count <= 30) {
+      return("Wouah, Vous êtes super rapide, Bien Joué !")
+    }
+    if (count <= 40) {
+      return("Bravo vous avez terminé la partie en moin de 40 mouvements")
+    } if( count <= 60) {
+      return("Bravo vous avez terminé, mais ... vous pouvez faire mieux !")
+    } if (count > 60) {
+      return("Bravo vous avez terminé, mais vous pouvez être beaucoup plus rapide !")
+    }
+    return;
+  }
+
+}
   render(){
-    const { gameState, timeLeft} = this.state;
+    const { gameState, timeLeft } = this.state;
+    const count = this.props.count
+    const victory = this.props.victory
     return (
       <div>
-      <HeaderTime gameState={gameState} timeLeft={timeLeft} endGame={this.endGame} />
+      <HeaderTime victory={victory} gameState={gameState} timeLeft={timeLeft} endGame={this.endGame} />
       {this.state.gameState !== GAME_STATE.PLAYING && (
         <Modal
+          victory={victory}
+          count={count}
           startGame={this.startGame}
           resetGame={this.resetGame}
           timeLeft={timeLeft}
