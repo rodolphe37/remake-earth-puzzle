@@ -1,7 +1,7 @@
 import React from 'react';
 import Timer from './Timer-test';
 
-const ScoreWindow = ({count}) => {
+const ScoreWindow = ({ count } ) => {
 
 
   // const state = {
@@ -43,9 +43,9 @@ const ScoreWindow = ({count}) => {
 
   return (
     <div className="scoreView" >
-    <Timer />
+    <Timer count={count}/>
    {/* <h1>Score :{incrementScore}</h1>*/}
-    <p>Vous avez effectué {count} {mov()}</p>
+    <p>Vous avez effectué</p><p> {count} {mov()}</p>
     <img src={require('../quizz-images/earth/big1.jpg')} alt="beautiful World"/>
     </div>
   )

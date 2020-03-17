@@ -18,15 +18,6 @@ export const GAME_STATE = {
   DONE: 'done',
 };
 
-export function getTotalScore(count, timeLeft) {
-  const gameScore = Object.values(count).reduce(
-    (sum) => sum,
-    0
-  );
-  const timeBonus = getSeconds(timeLeft);
-  return gameScore ? gameScore + timeBonus : 0;
-}
-
 
 const initialState = {
   // we initialize the state
@@ -79,7 +70,7 @@ export default class Timer extends React.Component {
   };
 
   render(){
-    const { gameState, timeLeft } = this.state;
+    const { gameState, timeLeft} = this.state;
     return (
       <div>
       <HeaderTime gameState={gameState} timeLeft={timeLeft} endGame={this.endGame} />

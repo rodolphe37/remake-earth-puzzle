@@ -11,3 +11,7 @@ body {
   max-width: 904px;
   max-height: 817px;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
